@@ -1,0 +1,117 @@
+.app-container {
+  display: flex;
+}
+
+.chat-container {
+  flex: 1;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #ddd;
+}
+
+.chat-header {
+  background-color: #a5a5a5;
+  padding: 15px;
+  font-size: 1.2em;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  font-weight: bold;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  max-width: 70%; /* Limit message width */
+}
+
+.message-self {
+  align-self: flex-end; /* Align self messages to the right */
+  margin-left: auto; /* Move self messages to the right */
+}
+
+.message-other {
+  align-self: flex-start; /* Align other messages to the left */
+  margin-right: auto; /* Move other messages to the left */
+}
+
+.message-content {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  width: 100%; /* Full width */
+}
+
+.message-icon {
+  width: 40px; 
+  height: 40px; 
+  border-radius: 50%; 
+  margin-right: 10px; 
+}
+
+.message-info {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.message-username {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.message-text {
+  background-color: #f1f1f1; /* Background color for message */
+  padding: 10px; /* Add padding inside the message bubble */
+  border-radius: 5px; /* Round corners of the message bubble */
+  max-width: 100%; /* Limit width to prevent overflow */
+}
+
+.message-self .message-text {
+  background-color: #0084ff; /* Background color for self messages */
+  color: white; /* Text color for self messages */
+  border-radius: 15px 15px 15px 0; /* Round corners */
+}
+
+.message-other .message-text {
+  background-color: #e5e5ea; /* Background color for other messages */
+  color: black; /* Text color for other messages */
+  border-radius: 15px 15px 0 15px; /* Round corners */
+}
+
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  margin-right: 10px;
+}
+
+.chat-input button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 15px;
+  background-color: #0084ff;
+  color: white;
+  cursor: pointer;
+}
+
+.chat-input button:hover {
+  background-color: #007bb5;
+}
